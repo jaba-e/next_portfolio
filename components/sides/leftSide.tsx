@@ -82,12 +82,7 @@ export default function LeftSide({ activeMenu }: LeftSidePropsInterface) {
         ))}
       </div>
       <div className="mt-2">
-        <Link
-          target="_blank"
-          download
-          rel="noopener noreferrer"
-          href="jaba_cv.pdf"
-        >
+        <Link target="_blank" download rel="noopener noreferrer" href="cv.pdf">
           <div className="inline-flex font-bold rounded-full bg-teal-400/10 px-5 py-2 text-xs leading-5 dark:hover:text-neon-green">
             Download CV
           </div>
