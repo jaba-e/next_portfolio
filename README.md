@@ -1,12 +1,17 @@
 ### Overview
 
+Minimal portfolio website built with Next.js and Tailwind. Demo at https://portfolio-frontend-black.vercel.app/
+
+![Image](public/portfolio.png)
+
 ### Project Structure
 
-- `src/app/`: Contains pages for routing.
-- `src/components/`: Reusable components and sections.
-- `src/static/`: Static files such as css constants.
-- `public/`: Holds static assets like images and fonts.
-- `lib/`: Utility functions or external configurations.
+- `app/: Application-specific code and utilities for overall behavior management.`
+- `components/: Reusable React components promoting code reusability and maintainability.`
+- `lib/: Utility functions, helper classes, or shared code repository.`
+- `pages/: Key directory representing pages, each file corresponds to a URL.`
+- `public/: Serves static assets like images, fonts, publicly accessible files.`
+- `static/: Legacy folder for static assets, recommend using public/.`
 
 ## Getting Started
 
