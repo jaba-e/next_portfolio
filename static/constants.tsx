@@ -11,7 +11,7 @@ import {
 } from "./interfaces";
 
 export const meta: metaInterface = {
-  title: "NICKNAME",
+  title: "NICK NAME",
   description: "Welcome to my portfolio page",
 } as const;
 
