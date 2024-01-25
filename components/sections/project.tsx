@@ -9,10 +9,10 @@ export default function Project() {
       <MobileTitle text={"Projects"} />
       <div className="mx-auto max-w-screen-md">
         {projects.map((project, i) => (
-          <>
-            <MediumCard key={project.id} data={project} />
+          <div key={project.id}>
+            <MediumCard data={project} />
             {i < projects.length - 1 && <Divider key={project.id} />}
-          </>
+          </div>
         ))}
       </div>
     </>
