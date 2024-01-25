@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "resolutions": {
     "string-width": "^1.0.2 || 2 || 3 || 4",
