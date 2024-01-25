@@ -1,13 +1,15 @@
 {
   "name": "portfolio_frontend",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest"
+  },
+  "resolutions": {
+    "string-width": "^1.0.2 || 2 || 3 || 4"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
