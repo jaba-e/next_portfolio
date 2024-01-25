@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Deploy to Staging
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Deploy to Vercel
+      - name: Deploy
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
