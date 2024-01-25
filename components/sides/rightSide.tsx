@@ -1,6 +1,6 @@
-import About from "@/components/sections/about";
-import Experience from "@/components/sections/experience";
-import Project from "@/components/sections/project";
+import { About } from "@/components/sections/about";
+import { Experience } from "@/components/sections/experience";
+import { Project } from "@/components/sections/project";
 
 export default function RightSide() {
   return (

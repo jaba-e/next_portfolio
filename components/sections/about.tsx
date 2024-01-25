@@ -1,7 +1,7 @@
-import { aboutMe } from "@/static/constants";
 import { MobileTitle } from "../mobileTitle";
+import { aboutMe } from "@/static/constants";
 
-export default function About() {
+export function About() {
   return (
     <>
       <MobileTitle text={"About"} />

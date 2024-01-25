@@ -21,6 +21,19 @@ export interface TitlePropsInterface {
   text: string;
 }
 
+export interface MenuProps {
+  data: menuInterface;
+  activeMenu: string;
+}
+
+export interface LogoProps {
+  data: socialInterface;
+}
+
+export interface MediumCardProps {
+  data: projectInterface;
+}
+
 export interface metaInterface {
   title: string;
   description: string;
@@ -30,6 +43,10 @@ export interface aboutMeInterface {
   text1: React.ReactNode;
   text2: React.ReactNode;
   text3: React.ReactNode;
+}
+
+export interface TimelineProps {
+  data: experienceInterface;
 }
 
 export interface myInterface {

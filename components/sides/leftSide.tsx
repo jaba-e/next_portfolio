@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-import { menus, socials } from "@/static/constants";
-import { LeftSidePropsInterface } from "@/static/interfaces";
 import { Me } from "../me";
 import { Menu } from "../menu";
 import { Logo } from "../logo";
+
+import { menus, socials } from "@/static/constants";
+import { LeftSidePropsInterface } from "@/static/interfaces";
 
 export default function LeftSide({ activeMenu }: LeftSidePropsInterface) {
   return (

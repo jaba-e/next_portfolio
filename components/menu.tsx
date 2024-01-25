@@ -1,10 +1,6 @@
-import { menuInterface } from "@/static/interfaces";
 import Link from "next/link";
+import { MenuProps } from "@/static/interfaces";
 
-interface MenuProps {
-  data: menuInterface;
-  activeMenu: string;
-}
 export function Menu({ data, activeMenu }: MenuProps) {
   return (
     <li>

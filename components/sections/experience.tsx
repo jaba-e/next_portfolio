@@ -1,8 +1,8 @@
-import { experiences } from "@/static/constants";
 import { MobileTitle } from "../mobileTitle";
 import { TimeLine } from "../timeline";
+import { experiences } from "@/static/constants";
 
-export default function Experience() {
+export function Experience() {
   return (
     <>
       <MobileTitle text={"Experience"} />

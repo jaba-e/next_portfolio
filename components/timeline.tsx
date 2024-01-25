@@ -1,9 +1,5 @@
 import { SmallCard } from "@/components/smallCard";
-import { experienceInterface } from "@/static/interfaces";
-
-interface TimelineProps {
-  data: experienceInterface;
-}
+import { TimelineProps } from "@/static/interfaces";
 
 export function TimeLine({ data }: TimelineProps) {
   return (

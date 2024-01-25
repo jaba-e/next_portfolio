@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { Formik, Field, Form, FormikHelpers } from "formik";
 import Lottie from "lottie-react";
+import { Formik, Field, Form, FormikHelpers } from "formik";
 
-import { ContactInputInterface } from "@/static/interfaces";
+import { SmallCard } from "@/components/smallCard";
 import { sendEmail } from "@/lib/sendEmail";
 import submit_animation from "public/submit_animation.json";
-import { SmallCard } from "@/components/smallCard";
+import { ContactInputInterface } from "@/static/interfaces";
 
 export default function ContactPage() {
   const [sending, setSending] = useState(false);

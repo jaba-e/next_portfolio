@@ -1,9 +1,5 @@
 import Link from "next/link";
-import { socialInterface } from "@/static/interfaces";
-
-interface LogoProps {
-  data: socialInterface;
-}
+import { LogoProps } from "@/static/interfaces";
 
 export function Logo({ data }: LogoProps) {
   return (

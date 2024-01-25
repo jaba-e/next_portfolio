@@ -1,9 +1,9 @@
-import { projects } from "@/static/constants";
 import { MobileTitle } from "../mobileTitle";
 import { MediumCard } from "../mediumCard";
 import { Divider } from "../divider";
+import { projects } from "@/static/constants";
 
-export default function Project() {
+export function Project() {
   return (
     <>
       <MobileTitle text={"Projects"} />
