@@ -17,6 +17,10 @@ export interface HighlightPropsInterface {
   link?: string;
 }
 
+export interface TitlePropsInterface {
+  text: string;
+}
+
 export interface metaInterface {
   title: string;
   description: string;
@@ -38,11 +42,13 @@ export interface myInterface {
 }
 
 export interface menuInterface {
+  id: number;
   name: string;
   href: string;
 }
 
 export interface experienceInterface {
+  id: number;
   place: string;
   role: string;
   startedYear: string;
@@ -53,6 +59,7 @@ export interface experienceInterface {
 }
 
 export interface projectInterface {
+  id: number;
   name: string;
   description: string;
   technologies: string[];
@@ -64,6 +71,7 @@ export interface skillInterface {
 }
 
 export interface socialInterface {
+  id: number;
   name: string;
   openNewTab: boolean;
   link: string;
