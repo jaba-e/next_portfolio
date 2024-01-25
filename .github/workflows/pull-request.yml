@@ -1,14 +1,14 @@
-name: Jest Test
+name: test
 
 on:
   pull_request:
     branches:
       - main
+      - develop
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -21,5 +21,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run Jest tests
+      - name: Run tests
         run: yarn test
