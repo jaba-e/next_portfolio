@@ -64,14 +64,17 @@ export const aboutMe: aboutMeInterface = {
 
 export const menus: menuInterface[] = [
   {
+    id: 1,
     name: "ABOUT",
     href: "#about",
   },
   {
+    id: 2,
     name: "EXPERIENCE",
     href: "#experience",
   },
   {
+    id: 3,
     name: "PROJECT",
     href: "#project",
   },
@@ -79,6 +82,7 @@ export const menus: menuInterface[] = [
 
 export const experiences: experienceInterface[] = [
   {
+    id: 1,
     place: "A Company",
     role: "Software Engineer",
     startedYear: "2015",
@@ -87,7 +91,6 @@ export const experiences: experienceInterface[] = [
       "Responsible for building infrastructure and shipping new features.",
     achievements: [
       "Developed a scalable microservices architecture, enhancing application performance and reliability.",
-      "Implemented AI-driven features, optimizing user experience and increasing engagement metrics.",
       "Led cross-functional team to deliver a major software release ahead-of-schedule.",
       "Created a secure authentication system, mitigating potential security vulnerabilities effectively.",
     ],
@@ -101,6 +104,7 @@ export const experiences: experienceInterface[] = [
     ],
   },
   {
+    id: 2,
     place: "B Company",
     role: "Software Engineer",
     startedYear: "2013",
@@ -108,9 +112,7 @@ export const experiences: experienceInterface[] = [
     responsibleFor: "Responsible for building new websites and infrastructure.",
     achievements: [
       "Developed a scalable microservices architecture, enhancing application performance and reliability.",
-      "Implemented AI-driven features, optimizing user experience and increasing engagement metrics.",
       "Led cross-functional team to deliver a major software release ahead-of-schedule.",
-      "Created a secure authentication system, mitigating potential security vulnerabilities effectively.",
     ],
     technologies: [
       "React.js",
@@ -123,6 +125,7 @@ export const experiences: experienceInterface[] = [
     ],
   },
   {
+    id: 3,
     place: "C Company",
     role: "Software engineer",
     responsibleFor: "Responsible for building new websites and infrastructure.",
@@ -130,9 +133,7 @@ export const experiences: experienceInterface[] = [
     finishedYear: "2013",
     achievements: [
       "Developed a scalable microservices architecture, enhancing application performance and reliability.",
-      "Implemented AI-driven features, optimizing user experience and increasing engagement metrics.",
       "Led cross-functional team to deliver a major software release ahead-of-schedule.",
-      "Created a secure authentication system, mitigating potential security vulnerabilities effectively.",
     ],
     technologies: [],
   },
@@ -140,27 +141,28 @@ export const experiences: experienceInterface[] = [
 
 export const projects: projectInterface[] = [
   {
+    id: 1,
     name: "First project",
-    description:
-      "The Project aims to revolutionize transportation through electric vehicles, renewable energy, and autonomous driving technology.",
+    description: "The Project aims to revolutionize transportation.",
     technologies: ["Next.js", "Node.js", "GCP"],
     link: "https://google.com",
   },
   {
+    id: 2,
     name: "Second project",
-    description:
-      "The Project aims to revolutionize transportation through electric vehicles, renewable energy, and autonomous driving technology.",
+    description: "The Project aims to revolutionize transportation.",
     technologies: ["Python", "Django", "AWS"],
     link: "https://google.com",
   },
   {
+    id: 3,
     name: "Third project",
-    description:
-      "The Project aims to revolutionize transportation through electric vehicles, renewable energy, and autonomous driving technology.",
+    description: "The Project aims to revolutionize transportation.",
     technologies: ["Ruby", "Ruby on Rails"],
     link: "https://google.com",
   },
   {
+    id: 4,
     name: "Fourth project",
     description:
       "The Project aims to revolutionize transportation through electric vehicles, renewable energy, and autonomous driving technology.",
@@ -168,6 +170,7 @@ export const projects: projectInterface[] = [
     link: "https://google.com",
   },
   {
+    id: 5,
     name: "Private projects",
     description:
       "The Project aims to revolutionize transportation through electric vehicles, renewable energy, and autonomous driving technology.",
@@ -206,6 +209,7 @@ export const skills: skillInterface[] = [
 
 export const socials: socialInterface[] = [
   {
+    id: 1,
     name: "Github",
     openNewTab: true,
     link: "https://github.com/jaba-e",
@@ -215,6 +219,7 @@ export const socials: socialInterface[] = [
     },
   },
   {
+    id: 2,
     name: "Linkedin",
     openNewTab: true,
     link: "https://www.linkedin.com/",
@@ -224,6 +229,7 @@ export const socials: socialInterface[] = [
     },
   },
   {
+    id: 3,
     name: "E-Mail",
     openNewTab: false,
     link: "/contact",

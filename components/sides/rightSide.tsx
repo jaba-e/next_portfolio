@@ -1,6 +1,6 @@
-import About from "@/components/sections/about";
-import Experience from "@/components/sections/experience";
-import Project from "@/components/sections/project";
+import { About } from "@/components/sections/about";
+import { Experience } from "@/components/sections/experience";
+import { Project } from "@/components/sections/project";
 
 export default function RightSide() {
   return (
@@ -16,7 +16,7 @@ export default function RightSide() {
       </section>
       <section
         id="project"
-        className="pt-20 pb-16 sm:pt-24 2xl:pt-40 2xl:pb-44"
+        className="pt-24 pb-24 sm:pt-28 2xl:pt-40 2xl:pb-44"
       >
         <Project />
       </section>
