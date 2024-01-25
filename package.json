@@ -9,7 +9,8 @@
     "test": "jest"
   },
   "resolutions": {
-    "string-width": "^1.0.2 || 2 || 3 || 4"
+    "string-width": "^1.0.2 || 2 || 3 || 4",
+    "wrap-ansi": "7.0.0"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
