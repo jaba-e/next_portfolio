@@ -1,4 +1,4 @@
-export interface ContactInputInterface {
+export interface ContactFormInterface {
   email: string;
   subject: string;
   message: string;
@@ -103,4 +103,7 @@ export interface GoogleAnalyticsEventInterface {
   value: number;
   delta: number;
   id: string;
+  navigationType: string;
+  entries: string;
+  rating: string;
 }

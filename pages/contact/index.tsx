@@ -1,34 +1,25 @@
-"use client";
-
 import React, { useState } from "react";
 import Lottie from "lottie-react";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 
 import { SmallCard } from "@/components/smallCard";
-// import { sendEmail } from "@/lib/sendEmail";
+import { sendEmail } from "@/utils/sendEmail";
 import submit_animation from "public/submit_animation.json";
-import { ContactInputInterface } from "@/static/interfaces";
+import { ContactFormInterface } from "@/static/interfaces";
 
 export default function ContactPage() {
   const [sending, setSending] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
   const handleSubmit = async (
-    values: ContactInputInterface,
-    { setSubmitting }: FormikHelpers<ContactInputInterface>
+    contactFormData: ContactFormInterface,
+    { setSubmitting }: FormikHelpers<ContactFormInterface>
   ) => {
     setSending(true);
 
-    // const mailResponse = await sendEmail(values);
+    const response = await sendEmail(contactFormData);
 
-    // mailResponse.status === 200
-    //   ? setSubmitMessage(
-    //       "Your message has been successfully submitted. I'll get back to you as soon as possible. Thank you."
-    //     )
-    //   : setSubmitMessage(
-    //       "Oops! Something went wrong. I've been working to fix it."
-    //     );
-
+    setSubmitMessage(response.message);
     setSending(false);
     setSubmitting(false);
   };

@@ -21,7 +21,8 @@
       "@/styles/*": ["styles/*"],
       "@/static/*": ["static/*"],
       "@/lib/*": ["lib/*"],
-      "@/app/*": ["app/*"]
+      "@/app/*": ["app/*"],
+      "@/utils/*": ["utils/*"]
     },
     "plugins": [
       {
