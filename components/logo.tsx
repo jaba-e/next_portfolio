@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { LogoProps } from "@/static/interfaces";
+import { LogoPropsInterface } from "@/static/interfaces";
 
-export function Logo({ data }: LogoProps) {
+export function Logo({ data }: LogoPropsInterface) {
   return (
     <div>
       <Link

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { MenuProps } from "@/static/interfaces";
+import { MenuPropsInterface } from "@/static/interfaces";
 
-export function Menu({ data, activeMenu }: MenuProps) {
+export function Menu({ data, activeMenu }: MenuPropsInterface) {
   return (
     <li>
       <Link className="group flex items-center py-3" href={data.href}>

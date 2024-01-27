@@ -1,21 +1,21 @@
 import Highlight from "@/components/highlight";
 import {
-  aboutMeInterface,
-  experienceInterface,
-  menuInterface,
-  metaInterface,
-  myInterface,
-  projectInterface,
-  skillInterface,
-  socialInterface,
+  AboutMeInterface,
+  ExperienceInterface,
+  MenuInterface,
+  MetaInterface,
+  MyInterface,
+  ProjectInterface,
+  SkillInterface,
+  SocialInterface,
 } from "./interfaces";
 
-export const meta: metaInterface = {
+export const meta: MetaInterface = {
   title: "NICK NAME",
   description: "Welcome to my portfolio page",
 } as const;
 
-export const my: myInterface = {
+export const my: MyInterface = {
   firstName: "Your ",
   lastName: "Name",
   avatar: "/avatar.png",
@@ -25,7 +25,7 @@ export const my: myInterface = {
   currentCompany: "A Company",
 } as const;
 
-export const aboutMe: aboutMeInterface = {
+export const aboutMe: AboutMeInterface = {
   text1: (
     <span>
       During my high school years, I excelled in a programming competition, and
@@ -62,7 +62,7 @@ export const aboutMe: aboutMeInterface = {
   ),
 };
 
-export const menus: menuInterface[] = [
+export const menus: MenuInterface[] = [
   {
     id: 1,
     name: "ABOUT",
@@ -80,7 +80,7 @@ export const menus: menuInterface[] = [
   },
 ] as const;
 
-export const experiences: experienceInterface[] = [
+export const experiences: ExperienceInterface[] = [
   {
     id: 1,
     place: "A Company",
@@ -139,7 +139,7 @@ export const experiences: experienceInterface[] = [
   },
 ] as const;
 
-export const projects: projectInterface[] = [
+export const projects: ProjectInterface[] = [
   {
     id: 1,
     name: "First project",
@@ -186,7 +186,7 @@ export const projects: projectInterface[] = [
   },
 ] as const;
 
-export const skills: skillInterface[] = [
+export const skills: SkillInterface[] = [
   {
     name: "Python",
   },
@@ -207,7 +207,7 @@ export const skills: skillInterface[] = [
   },
 ] as const;
 
-export const socials: socialInterface[] = [
+export const socials: SocialInterface[] = [
   {
     id: 1,
     name: "Github",

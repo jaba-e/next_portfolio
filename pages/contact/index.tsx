@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 
 import { SmallCard } from "@/components/smallCard";
-import { sendEmail } from "@/lib/sendEmail";
+// import { sendEmail } from "@/lib/sendEmail";
 import submit_animation from "public/submit_animation.json";
 import { ContactInputInterface } from "@/static/interfaces";
 
@@ -19,15 +19,15 @@ export default function ContactPage() {
   ) => {
     setSending(true);
 
-    const mailResponse = await sendEmail(values);
+    // const mailResponse = await sendEmail(values);
 
-    mailResponse.status === 200
-      ? setSubmitMessage(
-          "Your message has been successfully submitted. I'll get back to you as soon as possible. Thank you."
-        )
-      : setSubmitMessage(
-          "Oops! Something went wrong. I've been working to fix it."
-        );
+    // mailResponse.status === 200
+    //   ? setSubmitMessage(
+    //       "Your message has been successfully submitted. I'll get back to you as soon as possible. Thank you."
+    //     )
+    //   : setSubmitMessage(
+    //       "Oops! Something went wrong. I've been working to fix it."
+    //     );
 
     setSending(false);
     setSubmitting(false);
