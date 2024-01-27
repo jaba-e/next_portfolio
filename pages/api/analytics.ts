@@ -34,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ message: message.analytics.success });
   } catch (e) {
+    console.log(e);
     res.status(500).json({ message: `Something went wrong ${e}` });
   }
 }

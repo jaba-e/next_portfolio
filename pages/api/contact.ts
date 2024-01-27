@@ -27,6 +27,7 @@ export default async function handler(
       message: message.email.success,
     });
   } catch (e) {
+    console.log(e);
     res.status(500).json({
       message: message.email.exception,
     });
