@@ -1,15 +1,13 @@
+import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
-import type { Metadata } from "next";
-import "@/static/css/globals.css";
 import { meta } from "@/static/constants";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
 };
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,

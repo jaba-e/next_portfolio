@@ -1,7 +1,7 @@
-export interface ContactInputInterface {
+export interface ContactFormInterface {
   email: string;
   subject: string;
-  message: string;
+  details: string;
 }
 
 export interface LeftSidePropsInterface {
@@ -21,35 +21,35 @@ export interface TitlePropsInterface {
   text: string;
 }
 
-export interface MenuProps {
-  data: menuInterface;
+export interface MenuPropsInterface {
+  data: MenuInterface;
   activeMenu: string;
 }
 
-export interface LogoProps {
-  data: socialInterface;
+export interface LogoPropsInterface {
+  data: SocialInterface;
 }
 
-export interface MediumCardProps {
-  data: projectInterface;
+export interface MediumCardPropsInterface {
+  data: ProjectInterface;
 }
 
-export interface metaInterface {
+export interface MetaInterface {
   title: string;
   description: string;
 }
 
-export interface aboutMeInterface {
+export interface AboutMeInterface {
   text1: React.ReactNode;
   text2: React.ReactNode;
   text3: React.ReactNode;
 }
 
-export interface TimelineProps {
-  data: experienceInterface;
+export interface TimelinePropsInterface {
+  data: ExperienceInterface;
 }
 
-export interface myInterface {
+export interface MyInterface {
   firstName: string;
   lastName: string;
   avatar: string;
@@ -58,13 +58,13 @@ export interface myInterface {
   currentCompany: string;
 }
 
-export interface menuInterface {
+export interface MenuInterface {
   id: number;
   name: string;
   href: string;
 }
 
-export interface experienceInterface {
+export interface ExperienceInterface {
   id: number;
   place: string;
   role: string;
@@ -75,7 +75,7 @@ export interface experienceInterface {
   technologies: string[];
 }
 
-export interface projectInterface {
+export interface ProjectInterface {
   id: number;
   name: string;
   description: string;
@@ -83,11 +83,11 @@ export interface projectInterface {
   link?: string;
 }
 
-export interface skillInterface {
+export interface SkillInterface {
   name: string;
 }
 
-export interface socialInterface {
+export interface SocialInterface {
   id: number;
   name: string;
   openNewTab: boolean;
@@ -96,4 +96,14 @@ export interface socialInterface {
     path: string;
     viewBox: string;
   };
+}
+
+export interface GoogleAnalyticsEventInterface {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+  entries: string;
+  rating: string;
 }

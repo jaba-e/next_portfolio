@@ -1,34 +1,25 @@
-"use client";
-
 import React, { useState } from "react";
 import Lottie from "lottie-react";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 
 import { SmallCard } from "@/components/smallCard";
-import { sendEmail } from "@/lib/sendEmail";
+import { sendEmail } from "@/utils/sendEmail";
 import submit_animation from "public/submit_animation.json";
-import { ContactInputInterface } from "@/static/interfaces";
+import { ContactFormInterface } from "@/static/interfaces";
 
 export default function ContactPage() {
   const [sending, setSending] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
   const handleSubmit = async (
-    values: ContactInputInterface,
-    { setSubmitting }: FormikHelpers<ContactInputInterface>
+    contactFormData: ContactFormInterface,
+    { setSubmitting }: FormikHelpers<ContactFormInterface>
   ) => {
     setSending(true);
 
-    const mailResponse = await sendEmail(values);
+    const response = await sendEmail(contactFormData);
 
-    mailResponse.status === 200
-      ? setSubmitMessage(
-          "Your message has been successfully submitted. I'll get back to you as soon as possible. Thank you."
-        )
-      : setSubmitMessage(
-          "Oops! Something went wrong. I've been working to fix it."
-        );
-
+    setSubmitMessage(response.message);
     setSending(false);
     setSubmitting(false);
   };
@@ -39,8 +30,8 @@ export default function ContactPage() {
         <Formik
           initialValues={{
             email: "",
-            message: "",
             subject: "",
+            details: "",
           }}
           onSubmit={handleSubmit}
         >
@@ -77,9 +68,9 @@ export default function ContactPage() {
                   <SmallCard label="Your Message" />
                 </span>
                 <Field
-                  id="message"
+                  id="details"
                   as="textarea"
-                  name="message"
+                  name="details"
                   rows={6}
                   className="bg-transparent block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   required

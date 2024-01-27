@@ -1,7 +1,4 @@
-"use client";
-
 import { useEffect, useState } from "react";
-
 import LeftSide from "@/components/sides/leftSide";
 import RightSide from "@/components/sides/rightSide";
 

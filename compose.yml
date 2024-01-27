@@ -1,6 +1,7 @@
 version: "3"
 services:
   app:
+    container_name: next_portfolio
     build:
       context: .
       dockerfile: Dockerfile

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { SmallCard } from "./smallCard";
-import { MediumCardProps } from "@/static/interfaces";
+import { MediumCardPropsInterface } from "@/static/interfaces";
 
-export function MediumCard({ data }: MediumCardProps) {
+export function MediumCard({ data }: MediumCardPropsInterface) {
   return (
     <div>
       <Link href={data.link || ""} target="_blank">
