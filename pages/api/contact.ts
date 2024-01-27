@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ContactFormInterface } from "@/static/interfaces";
-import { errorMessage, successMessage } from "@/static/messages";
+import { message } from "@/static/messages";
 
 export default async function handler(
   req: NextApiRequest,
@@ -24,11 +24,11 @@ export default async function handler(
     });
 
     res.status(200).json({
-      message: successMessage.email.success,
+      message: message.email.success,
     });
   } catch (e) {
     res.status(500).json({
-      message: errorMessage.email.exception,
+      message: message.email.exception,
     });
   }
 }
