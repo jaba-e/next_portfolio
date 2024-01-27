@@ -14,13 +14,13 @@ export default async function handler(
 
     const resend = new Resend(process.env.SENDER_API);
 
-    const { subject, message }: ContactFormInterface = req.body;
+    const { subject, details }: ContactFormInterface = req.body;
 
     await resend.emails.send({
       from: "12@resend.dev",
       to: "javkhaanaaa@gmail.com",
       subject: `[Portfolio contact] ${subject}`,
-      html: message,
+      html: details,
     });
 
     res.status(200).json({

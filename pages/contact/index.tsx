@@ -30,8 +30,8 @@ export default function ContactPage() {
         <Formik
           initialValues={{
             email: "",
-            message: "",
             subject: "",
+            details: "",
           }}
           onSubmit={handleSubmit}
         >
@@ -68,9 +68,9 @@ export default function ContactPage() {
                   <SmallCard label="Your Message" />
                 </span>
                 <Field
-                  id="message"
+                  id="details"
                   as="textarea"
-                  name="message"
+                  name="details"
                   rows={6}
                   className="bg-transparent block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   required

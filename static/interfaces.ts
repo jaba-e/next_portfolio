@@ -1,7 +1,7 @@
 export interface ContactFormInterface {
   email: string;
   subject: string;
-  message: string;
+  details: string;
 }
 
 export interface LeftSidePropsInterface {
