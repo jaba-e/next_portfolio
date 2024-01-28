@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+      {process.env.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
     </html>
   );
 }
