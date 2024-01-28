@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { GoogleAnalyticsEventInterface } from "@/static/interfaces";
 import { message } from "@/static/messages";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function POST(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (!process.env.GA_ID) {
       throw new Error(message.analytics.exception);
@@ -32,9 +32,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       nonInteraction: true,
     });
 
-    res.status(200).json({ message: message.analytics.success });
+    return Response.json({
+      message: message.analytics.success,
+    });
   } catch (e) {
-    console.log(e);
-    res.status(500).json({ message: `Something went wrong ${e}` });
+    return Response.json({
+      message: `Something went wrong ${e}`,
+    });
   }
 }

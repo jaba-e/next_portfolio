@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Lottie from "lottie-react";
 import { Formik, Field, Form, FormikHelpers } from "formik";

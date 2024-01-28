@@ -1,7 +1,39 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+
 import { MenuPropsInterface } from "@/static/interfaces";
 
-export function Menu({ data, activeMenu }: MenuPropsInterface) {
+export function Menu({ data }: MenuPropsInterface) {
+  const [activeMenu, setActiveMenu] = useState<string>("ABOUT");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
+
+      const experienceElement = document.getElementById("experience");
+      const projectsElement = document.getElementById("project");
+
+      if (experienceElement && projectsElement) {
+        if (scrollPosition < experienceElement.offsetTop) {
+          setActiveMenu("ABOUT");
+        } else if (scrollPosition < projectsElement.offsetTop) {
+          setActiveMenu("EXPERIENCE");
+        } else {
+          setActiveMenu("PROJECT");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <li>
       <Link className="group flex items-center py-3" href={data.href}>

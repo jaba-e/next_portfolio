@@ -1,13 +1,10 @@
 import Link from "next/link";
-
 import { Me } from "../me";
 import { Menu } from "../menu";
 import { Logo } from "../logo";
-
 import { menus, socials } from "@/static/constants";
-import { LeftSidePropsInterface } from "@/static/interfaces";
 
-export default function LeftSide({ activeMenu }: LeftSidePropsInterface) {
+export function LeftSide() {
   return (
     <section className="relative isolate overflow-hidden">
       <Me />
@@ -15,7 +12,7 @@ export default function LeftSide({ activeMenu }: LeftSidePropsInterface) {
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
             {menus.map((menu) => (
-              <Menu key={menu.id} data={menu} activeMenu={activeMenu} />
+              <Menu key={menu.id} data={menu} />
             ))}
           </ul>
         </nav>
