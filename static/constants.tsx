@@ -13,6 +13,7 @@ import {
 export const meta: MetaInterface = {
   title: "NICK NAME",
   description: "Welcome to my portfolio page",
+  robots: "noindex, nofollow",
 } as const;
 
 export const my: MyInterface = {

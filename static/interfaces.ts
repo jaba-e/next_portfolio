@@ -32,6 +32,7 @@ export interface MediumCardPropsInterface {
 export interface MetaInterface {
   title: string;
   description: string;
+  robots: string;
 }
 
 export interface AboutMeInterface {
