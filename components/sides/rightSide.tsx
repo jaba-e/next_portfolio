@@ -2,7 +2,7 @@ import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Project } from "@/components/sections/project";
 
-export default function RightSide() {
+export function RightSide() {
   return (
     <div className="2xl:pr-16">
       <section

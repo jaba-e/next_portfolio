@@ -3,10 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { ContactFormInterface } from "@/static/interfaces";
 import { message } from "@/static/messages";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (!process.env.SENDER_API) {
       throw new Error("Sender API is not defined.");
@@ -23,12 +20,11 @@ export default async function handler(
       html: details,
     });
 
-    res.status(200).json({
+    return Response.json({
       message: message.email.success,
     });
   } catch (e) {
-    console.log(e);
-    res.status(500).json({
+    return Response.json({
       message: message.email.exception,
     });
   }

@@ -4,10 +4,6 @@ export interface ContactFormInterface {
   details: string;
 }
 
-export interface LeftSidePropsInterface {
-  activeMenu: string;
-}
-
 export interface SmallCardPropsInterface {
   label: string;
 }
@@ -23,7 +19,6 @@ export interface TitlePropsInterface {
 
 export interface MenuPropsInterface {
   data: MenuInterface;
-  activeMenu: string;
 }
 
 export interface LogoPropsInterface {
@@ -37,6 +32,7 @@ export interface MediumCardPropsInterface {
 export interface MetaInterface {
   title: string;
   description: string;
+  robots: string;
 }
 
 export interface AboutMeInterface {

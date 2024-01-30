@@ -2,11 +2,12 @@ import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { meta } from "@/static/constants";
+import "@/static/css/globals.css";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  ...meta,
 };
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -16,11 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="robots" content="noindex, nofollow" />
-      </head>
       <body className={inter.className}>{children}</body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+      {process.env.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
     </html>
   );
 }
