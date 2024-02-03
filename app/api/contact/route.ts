@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { ContactFormInterface } from "@/static/interfaces";
 import { message } from "@/static/messages";
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextApiRequest) {
   try {
     if (!process.env.SENDER_API) {
       throw new Error("Sender API is not defined.");

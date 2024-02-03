@@ -1,7 +1,8 @@
-export interface ContactFormInterface {
-  email: string;
-  subject: string;
-  details: string;
+export interface TransporterDataInterface {
+  from: string | undefined;
+  to: string | undefined;
+  subject: string | undefined;
+  details: string | undefined;
 }
 
 export interface SmallCardPropsInterface {
