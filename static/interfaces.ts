@@ -1,5 +1,5 @@
-export interface ContactFormInterface {
-  email: string;
+export interface ContactFormDataInterface {
+  from: string;
   subject: string;
   details: string;
 }
