@@ -1,8 +1,7 @@
-export interface TransporterDataInterface {
-  from: string | undefined;
-  to: string | undefined;
-  subject: string | undefined;
-  details: string | undefined;
+export interface ContactFormDataInterface {
+  from: string;
+  subject: string;
+  details: string;
 }
 
 export interface SmallCardPropsInterface {

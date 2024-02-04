@@ -1,8 +1,9 @@
 "use server";
 
-import { message } from "@/static/messages";
 import nodemailer, { Transporter } from "nodemailer";
 import { z } from "zod";
+import { message } from "@/static/messages";
+import { ContactFormDataInterface } from "@/static/interfaces";
 
 const schema = z.object({
   from: z
@@ -15,7 +16,7 @@ const schema = z.object({
     .string({
       invalid_type_error: message.email.validation.subject.invalid_type_error,
     })
-    .max(1, { message: message.email.validation.subject.max_exceed_error }),
+    .max(100, { message: message.email.validation.subject.max_exceed_error }),
   details: z
     .string({
       invalid_type_error: message.email.validation.details.invalid_type_error,
@@ -23,7 +24,7 @@ const schema = z.object({
     .max(500, { message: message.email.validation.details.max_exceed_error }),
 });
 
-export async function sendEmail(prevState: any, formData: FormData) {
+export async function sendEmail(currentState: any, formData: FormData) {
   const validatedFields = schema.safeParse({
     from: formData.get("from")?.toString(),
     subject: formData.get("subject")?.toString(),
@@ -62,7 +63,12 @@ const createTransporter = (): Transporter => {
   });
 };
 
-const prepareTransporterData = (contactFormData: any) => ({
+const prepareTransporterData = ({
+  data,
+}: {
+  data: ContactFormDataInterface;
+}) => ({
   to: process.env.TRANSPORTER_USER_NAME,
-  ...contactFormData,
+  subject: data.subject,
+  html: `<div> FROM: ${data.from}<div><div>DETAILS: ${data.details}<div>`,
 });
