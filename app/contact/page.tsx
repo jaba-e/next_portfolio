@@ -7,6 +7,7 @@ import { SmallCard } from "@/components/smallCard";
 
 import { SubmitButton } from "@/components/submitButton";
 import { sendEmail } from "../actions/sendEmail";
+import { ValidationError } from "@/components/validationError";
 
 export default function ContactPage() {
   const [state, formAction] = useFormState(sendEmail, null);
@@ -27,9 +28,7 @@ export default function ContactPage() {
               placeholder="mail@example.com"
               required
             />
-            {state?.errors?.from?.map((error: string) => (
-              <p>{error}</p>
-            ))}
+            <ValidationError errors={state?.errors?.from} />
             <span className="block mb-2">
               <SmallCard label="Subject" />
             </span>
@@ -40,11 +39,7 @@ export default function ContactPage() {
               placeholder="Let me know how I can help you."
               required
             />
-            <p aria-live="polite">
-              {state?.errors?.subject?.map((error: string) => (
-                <p>{error}</p>
-              ))}
-            </p>
+            <ValidationError errors={state?.errors?.subject} />
             <div className="sm:col-span-2">
               <span className="block mb-2">
                 <SmallCard label="Your Message" />
@@ -57,9 +52,7 @@ export default function ContactPage() {
                 required
               />
             </div>
-            {state?.errors?.details?.map((error: string) => (
-              <p>{error}</p>
-            ))}
+            <ValidationError errors={state?.errors?.details} />
             <SubmitButton lottieClassName="w-10" />
           </div>
           {state?.success && (
