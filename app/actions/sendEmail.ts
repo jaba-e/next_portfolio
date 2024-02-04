@@ -10,12 +10,12 @@ const schema = z.object({
       invalid_type_error: message.email.validation.from.invalid_type_error,
     })
     .email({ message: message.email.validation.from.not_mail_error })
-    .max(255, { message: message.email.validation.subject.max_exceed_error }),
+    .max(255, { message: message.email.validation.from.max_exceed_error }),
   subject: z
     .string({
       invalid_type_error: message.email.validation.subject.invalid_type_error,
     })
-    .max(100, { message: message.email.validation.subject.max_exceed_error }),
+    .max(1, { message: message.email.validation.subject.max_exceed_error }),
   details: z
     .string({
       invalid_type_error: message.email.validation.details.invalid_type_error,
@@ -57,7 +57,7 @@ const createTransporter = (): Transporter => {
     service: "gmail",
     auth: {
       user: process.env.TRANSPORTER_USER_NAME,
-      pass: "22",
+      pass: process.env.TRANSPORTER_USER_PASS,
     },
   });
 };

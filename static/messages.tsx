@@ -9,14 +9,15 @@ export const message = {
       from: {
         invalid_type_error: "Email input type is invalid.",
         not_mail_error: "Your email is invalid.",
+        max_exceed_error: "Email cannot exceed 255 characters",
       },
       subject: {
         invalid_type_error: "Subject input type is invalid.",
-        max_exceed_error: "Details cannot exceed 5 characters",
+        max_exceed_error: "Details cannot exceed 100 characters",
       },
       details: {
         invalid_type_error: "Details input type is invalid.",
-        max_exceed_error: "Details cannot exceed 5 characters",
+        max_exceed_error: "Details cannot exceed 500 characters",
       },
     },
     success:
