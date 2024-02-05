@@ -8,10 +8,8 @@ Minimal portfolio website built with Next.js and Tailwind. Demo at https://portf
 
 - `app/: Application-specific code and utilities for overall behavior management.`
 - `components/: Reusable React components promoting code reusability and maintainability.`
-- `lib/: Utility functions, helper classes, or shared code repository.`
-- `pages/: Key directory representing pages, each file corresponds to a URL.`
 - `public/: Serves static assets like images, fonts, publicly accessible files.`
-- `static/: Legacy folder for static assets, recommend using public/.`
+- `constants/: Constants files like messages, interfaces.`
 
 ## Getting Started
 
@@ -39,4 +37,4 @@ Any commit to the main branch is automatically deployed into production using CI
 
 ## Feedback and Issues
 
-If you encounter any issues or have suggestions for improvement, please feel free to create an issue.
+If you encounter any issues or have suggestions for improvement, please feel free to create an issue or pull request.

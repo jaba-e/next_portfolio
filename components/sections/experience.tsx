@@ -1,6 +1,6 @@
 import { MobileTitle } from "../mobileTitle";
 import { TimeLine } from "../timeline";
-import { experiences } from "@/static/constants";
+import { experiences } from "@/constants/portfolio";
 
 export function Experience() {
   return (

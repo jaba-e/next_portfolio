@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SmallCard } from "./smallCard";
-import { MediumCardPropsInterface } from "@/static/interfaces";
+import { MediumCardPropsInterface } from "constants/interfaces";
 
 export function MediumCard({ data }: MediumCardPropsInterface) {
   return (

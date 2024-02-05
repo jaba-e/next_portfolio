@@ -1,4 +1,4 @@
-import { SmallCardPropsInterface } from "@/static/interfaces";
+import { SmallCardPropsInterface } from "constants/interfaces";
 
 export function SmallCard({ label }: SmallCardPropsInterface) {
   return (

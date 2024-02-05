@@ -1,7 +1,7 @@
 import { MobileTitle } from "../mobileTitle";
 import { MediumCard } from "../mediumCard";
 import { Divider } from "../divider";
-import { projects } from "@/static/constants";
+import { projects } from "@/constants/portfolio";
 
 export function Project() {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HighlightPropsInterface } from "@/static/interfaces";
+import { HighlightPropsInterface } from "constants/interfaces";
 
 export default function Highlight({ text, link }: HighlightPropsInterface) {
   return (

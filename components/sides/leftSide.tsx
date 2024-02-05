@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Me } from "../me";
 import { Menu } from "../menu";
 import { Logo } from "../logo";
-import { menus, socials } from "@/static/constants";
+import { menus, socials } from "@/constants/portfolio";
 
 export function LeftSide() {
   return (

@@ -1,5 +1,5 @@
 import { SmallCard } from "@/components/smallCard";
-import { TimelinePropsInterface } from "@/static/interfaces";
+import { TimelinePropsInterface } from "constants/interfaces";
 
 export function TimeLine({ data }: TimelinePropsInterface) {
   return (
