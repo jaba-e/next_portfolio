@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
-import { meta } from "@/static/constants";
-import "@/static/css/globals.css";
+import { meta } from "constants/constants";
+import "./styles/globals.css";
 
 export const metadata: Metadata = {
   ...meta,

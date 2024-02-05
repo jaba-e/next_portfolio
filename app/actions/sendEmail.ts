@@ -2,8 +2,8 @@
 
 import nodemailer, { Transporter } from "nodemailer";
 import { z } from "zod";
-import { message } from "@/static/messages";
-import { ContactFormDataInterface } from "@/static/interfaces";
+import { message } from "constants/messages";
+import { ContactFormDataInterface } from "constants/interfaces";
 
 const schema = z.object({
   from: z

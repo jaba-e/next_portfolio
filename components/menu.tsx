@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-import { MenuPropsInterface } from "@/static/interfaces";
+import { MenuPropsInterface } from "constants/interfaces";
 
 export function Menu({ data }: MenuPropsInterface) {
   const [activeMenu, setActiveMenu] = useState<string>("ABOUT");

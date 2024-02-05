@@ -1,4 +1,4 @@
-import { TitlePropsInterface } from "@/static/interfaces";
+import { TitlePropsInterface } from "constants/interfaces";
 
 export function MobileTitle({ text }: TitlePropsInterface) {
   return (
