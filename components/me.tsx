@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { my } from "constants/constants";
+import { my } from "@/constants/portfolio";
 
 export function Me() {
   return (

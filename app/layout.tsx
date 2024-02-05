@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
-import { meta } from "constants/constants";
+import { meta } from "@/constants/portfolio";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {

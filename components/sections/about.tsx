@@ -1,5 +1,5 @@
 import { MobileTitle } from "../mobileTitle";
-import { aboutMe } from "constants/constants";
+import { aboutMe } from "@/constants/portfolio";
 
 export function About() {
   return (
