@@ -1,10 +1,7 @@
-/**
- * @jest-environment jsdom
- */
 import { render } from "@testing-library/react";
-import Home from "@/app/page";
+import HomePage from "@/app/page";
 
 it("renders homepage unchanged", () => {
-  const { container } = render(<Home />);
+  const { container } = render(<HomePage />);
   expect(container).toMatchSnapshot();
 });
