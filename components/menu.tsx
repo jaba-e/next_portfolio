@@ -1,38 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
+import { useSelectActiveMenu } from "@/app/customHooks";
 import { MenuPropsInterface } from "constants/interfaces";
+import { MENU_TYPES } from "@/constants/enums";
 
 export function Menu({ data }: MenuPropsInterface) {
-  const [activeMenu, setActiveMenu] = useState<string>("ABOUT");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop;
-
-      const experienceElement = document.getElementById("experience");
-      const projectsElement = document.getElementById("project");
-
-      if (experienceElement && projectsElement) {
-        if (scrollPosition < experienceElement.offsetTop) {
-          setActiveMenu("ABOUT");
-        } else if (scrollPosition < projectsElement.offsetTop) {
-          setActiveMenu("EXPERIENCE");
-        } else {
-          setActiveMenu("PROJECT");
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const activeMenu: MENU_TYPES = useSelectActiveMenu();
 
   return (
     <li>
