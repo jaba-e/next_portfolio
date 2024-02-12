@@ -1,6 +1,6 @@
 ### Overview
 
-Minimal portfolio website built with Next.js and Tailwind. Demo at https://portfolio-frontend-black.vercel.app/
+Minimal portfolio website built with Next.js and Tailwind. Demo at https://portfolio-frontend-v2-kappa.vercel.app/
 
 ![Image](public/portfolio.png)
 
