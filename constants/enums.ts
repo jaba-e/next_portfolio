@@ -1,0 +1,5 @@
+export enum MENU_TYPES {
+  ABOUT = "ABOUT",
+  EXPERIENCE = "EXPERIENCE",
+  PROJECT = "PROJECT",
+}
